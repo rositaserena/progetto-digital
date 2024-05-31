@@ -1,0 +1,360 @@
+body.intropagina {
+  background-image: url("./immagini/sfondointro.jpg");
+  background-size: cover;/*copre l'intero viwport*/
+  background-position: center;/*centra l'immagine orizzontalmente*/
+  background-repeat: no-repeat;/*Impedisce la ripetizione dell'immagine*/
+  margin: 0; /* Rimuove il margine predefinito del body */
+  padding: 0; /* Rimuove il padding predefinito del body */
+ /* Imposta un colore di sfondo predefinito */
+  font-family: garamond; /* Imposta il font predefinito */
+  .rosita-classe {
+  width: 100%; /* Imposta la larghezza dell'immagine al 100% del suo contenitore */
+   height:auto;
+}
+     
+}
+.btn-intro {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    right:40%;
+    transform: translate(-50%, -50%);
+    background-color: #999; /* Imposta il colore di riempimento del pulsante */
+    border: 2px solid #000; /* Aggiungi un bordo di 2px di spessore nero */
+    padding: 10px 20px; /* Aggiungi del padding per rendere il pulsante più grande */
+    color: ; /* Imposta il colore del testo */
+    text-align: center;
+    font-family: garamond;
+}
+/* colore sfondo pagina (body) */
+.custom-background {
+  background-color: rgba(0, 102, 0, 0.3); /* Colore di sfondo personalizzato */
+}
+/*colore navbar*/
+.custom-bg-green {
+  background-color: #001a00 /* colore verde specifico */
+}
+ .container-fluid{
+  font-family: garamond;
+ }
+
+  #header {
+  padding:15px 15px 200px;
+  text-align: center;
+  background-image: url(../immagini/sfondointro.jpg); 
+  background-size:cover;
+  background-position: center; /* Posiziona l'immagine al centro */
+  font-size: 30px; 
+  font-weight: bold;
+  width:100%;
+  height:300px;
+  top:0;
+  margin-top:0px;
+  margin-bottom: 0px;
+}
+
+
+/* Stili per la barra di ricerca */
+.btn-barra:{
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    right:50%;
+    background-color:#001a00;
+}
+.d-flex input[type="search"] {
+  font-family: garamond;/* Stili per l'input di ricerca */
+}
+
+.d-flex button[type="submit"] {
+ background-color:#ffffe6 ; /* Stili per il pulsante di ricerca */
+}
+
+/* Stili per la barra di ricerca sticky-top */
+.container.sticky-top {
+  /* Stili per la barra di ricerca sticky-top */
+}
+/*stile per l'avatar*/
+.avatar{
+   display: block; /* Assicura che l'immagine sia un blocco */
+  margin: 20px auto 0; /* 20px di margine sopra, automatico per i lati, nessun margine sotto *//* Imposta i margini automaticamente per centrare l'immagine */
+  width: 70px;
+  height: auto;
+  border-radius: 50%;
+  padding-top:10px;
+  padding-bottom: ;
+}
+.panel {
+    background-color: #ffffe6; /* Colore di sfondo del pannello */
+    border: 1px solid  rgb(0, 51, 0); /* Bordo del pannello */
+    padding: 10px; /* Spaziatura interna del pannello */
+    margin-top: 20px; /* Margine superiore del pannello */
+    font-family: garamond;
+    text-align: center;
+}
+/*Stili per il button della sidebar sotto il panel*/
+.button {
+  background-color:#ffffe6; /* Green */
+  border: none;
+  color:white ;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display:inline-block;
+  font-size: 16px;
+  margin:50px 40px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  font-family: garamond;
+}
+.button1 {
+  background-color:#ffffe6 ; 
+  color: black; 
+  border: 2px solid #000;
+  cursor:pointer;
+border-radius:5px;
+}
+
+.button1:hover {
+  background-color: rgba(0, 51, 0, 0.1);
+  color: white;
+}
+.text-center{
+text-align: center; /* Centra il contenuto orizzontalmente */
+   font-family: garamond;
+}
+/*opacità container della section principale della home*/
+.container-opacity {
+    background-color: rgba(0, 51, 0, 0.2); /* Colore opacizzato */
+    padding: 20px; /* Spaziatura interna */
+}
+.wrapper {
+    display: flex;
+    justify-content: center; /* Centra orizzontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Altezza della finestra del browser */
+}
+.container2 {
+  background-color: #ffffe6;
+  position: relative; 
+  width: 100%; /* Larghezza del 80% della larghezza del contenitore genitore */
+  max-width: 500px; /* Larghezza massima di 400 pixel */
+  height: 500px; /* Altezza di 200 pixel */
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px; /* Padding interno di 20 pixel */
+  box-sizing: border-box; /* Include il padding nella larghezza e altezza */
+  text-align: center; /* Centra il contenuto orizzontalmente */
+   font-family: garamond;
+    }
+
+.carousel-item img {
+    width: 100%;
+    height: 300%;
+    object-fit: cover; /* Mantieni le proporzioni dell'immagine e riempila completamente */
+}
+.btn-custom2 {
+  background-color: #555;
+  color:white;
+  padding:12px 24px;
+border:2px solid #000;
+cursor:pointer;
+border-radius:5px;
+text-align:center;
+}
+
+/* Stili per il container delle cards */
+.card-container {
+  padding-top: 30px; /* Aggiungi spazio all'interno del container delle cards sopra */
+  box-sizing: border-box; /* Imposta il box-sizing per includere il padding nelle dimensioni totali */
+  flex-direction: column; /* Allinea le cards in verticale */
+  background-color:#ffffe6;
+  margin-bottom: 50px; /* Aggiungi spazio tra le cards e il footer */
+}
+.card-container.row {
+  display: flex; /* Imposta il display a flex per allineare le cards in orizzontale */
+  flex-wrap: wrap; /* Consente il wrapping delle cards quando lo spazio è insufficiente */
+  justify-content: space-around; /* Distribuisci uniformemente le cards */
+}
+
+/* Stili per il testo sopra le cards */
+.text-above-cards {
+   text-align: center;
+   margin-bottom: 20px;
+    position:relative;
+    top: 50%; /* Posiziona il testo sopra le cards */
+    left: 50%; /* Allinea il testo al centro */
+    transform: translateX(-50%); /* Centra il testo orizzontalmente */
+}
+
+.text-above-cards h2 {
+   font-size: 2em;
+   margin-bottom: 10px;
+}
+
+.text-above-cards p {
+   font-size: 1.2em;
+   color: #666;
+}
+/* Stili per le cards */
+.card {
+  /*Aggiungi spazio tra le cards*/
+  margin:15px;
+background-color:#ffffcc;
+flex:0 1 calc(33.33% - 30px); /* Imposta la larghezza di ogni card in modo che occupi un terzo del container */
+flex-direction: column;
+  position: relative;
+}
+.card-body{
+  font-family: garamond;
+ display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+}
+
+.card-img-top{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color:rgba(0, 51, 0, 0.2) ;
+}
+
+.card-container:hover .overlay {
+  opacity: 1;
+}
+.btn-custom:{
+transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+ 
+/*Impostazioni per il contenitore delle cards*/
+.container-tutorial-bootstrap {
+  position: static;
+  width: 100%;
+  max-width: 1000px;
+  margin:0 auto; /*Centra il contenitore orizzontalmente*/
+}
+/*stili per le immagini all'interno delle cards*/
+.container img {
+  width: 100%;
+  height: 100%;
+}
+/*stili per i pulsanti all'interno del container*/
+.btn-custom{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+-ms-transform:translate(-50%,-50%);
+background-color:#555;
+color:white;
+font-size:16px;
+padding:12px 24px;
+border:2px solid #000;
+cursor:pointer;
+border-radius:5px;
+text-align:center;
+}
+/*.container .btn:hover {
+  background-color:  #999900;*/
+.container .btn:hover {
+  background-color:  #999900;
+
+/* Modifica il colore di sfondo al passaggio del mouse */
+.dropdown-item:hover {
+  background-color: #999900; /* Cambia il colore di sfondo al passaggio del mouse a verde */
+  color: #fff; /* Cambia il colore del testo al passaggio del mouse a bianco */
+}
+
+
+.btn-custom {
+  color: #fff; /* Colore del testo */
+  background-color: #999900; /* Colore di sfondo rosso */
+  border-color: #999900; /* Colore del bordo rosso */
+}
+
+.btn-custom:hover {
+  background-color: #999900; /* Colore di sfondo rosso più scuro al passaggio del mouse */
+  border-color: #999900; /* Colore del bordo rosso più scuro al passaggio del mouse */
+}
+/* non so a cosa si riferisca */
+.container-fluid {
+  background-color:rgb(8, 90, 0);
+
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #999900;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+/*sarà qualcosa della pagina precedente*/
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+.btn-custom {
+    background-color: #999900; /* Sostituisci con il colore desiderato */
+    color: #ffffff; /* Colore del testo */
+    /* Aggiungi altri stili desiderati */
+  }
+
+  .image-containerimg {
+  position: relative;
+  overflow: hidden;
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+/*.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s;
+}*/
+
+
+.container3 {
+  background-color:#ffffe6;
+}
+#myModalLabel{
+  text-align: center;
+  font-family: garamond, serif; 
+}
+  #modal1 .modal-dialog {
+  background-color: lightblue; /* Cambia il colore di sfondo del pannello */
+}
+#modal1.modal {
+  background-color: rgba(255, 255, 255, 0.8); /* Cambia il colore di sfondo della modal */
+}

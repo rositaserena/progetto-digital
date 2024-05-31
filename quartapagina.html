@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="ita">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Il mito di Narciso</title>
+    <link rel="stylesheet" href="stile.css/file.css">
+  <style>
+ h1:hover, a:hover {
+  background-color: rgba(0, 51, 0, 0.2);
+}
+
+    /* Stile per il corpo */
+    .body {
+      font-family: "garamond", serif;
+    }
+
+    .navbar {
+    margin-bottom: 30px; /* Imposta il margine sotto la navbar */
+  }
+    
+#myContainer.col-12.container-opacity{
+  background-color: rgba(255, 255, 255, 0.8);
+   padding-top: 20px !important;
+  margin-top: 100px; /* Aggiungi un margine superiore per aumentare lo spazio sopra */
+  margin-bottom: 50px; /* Aggiungi un margine inferiore per mantenere simmetria, se necessario */
+  box-sizing: border-box; /* Include il padding nella larghezza e altezza */
+  }
+
+  .img-galleria{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    aspect-ratio:1;
+  }
+  .img-container {
+        position: relative;
+        display: inline-block;
+    }
+     
+    .badge {
+        position:absolute;
+        position: absolute;
+        top: -22px; /* Distanza dal bordo superiore */
+        right: -2px; /* Distanza dal bordo destro */
+        background-color:  #001a00; /* Esempio di colore di sfondo */
+        color: white; /* Colore del testo */
+        padding: 5px 10px; /* Padding per il contenuto del badge */
+        border-radius: 5px; /* Angoli arrotondati */
+    }
+    .col-img {
+        margin-bottom: 25px; /* Aggiunge uno spazio tra le colonne delle immagini */
+    }
+    .modal-content-custom {
+        background-color: #ffffe6;;
+        color: #003300;  
+}
+    .modal-body{
+      font-family: garamond;
+
+    }
+    .container4 {
+  background-color:#ffffe6;
+  position: relative; 
+  width: 90%; /* Larghezza del 80% della larghezza del contenitore genitore */
+  max-width: 1300px; /* Larghezza massima di 400 pixel */
+  height:auto;/* Altezza di 200 pixel */
+  margin: 50px auto;
+  padding: 5px; /* Padding interno di 20 pixel */
+  box-sizing: border-box; /* Include il padding nella larghezza e altezza */
+  text-align: center; /* Centra il contenuto orizzontalmente */
+   font-family: garamond;
+   overflow: hidden;
+}
+.container4 h1 {
+ margin-top: 0; /* Rimuove il margine superiore predefinito */
+ margin-bottom: 20px; /* Aggiunge spazio sotto il titolo */
+}
+    .row-custom {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .row-custom .col {
+      text-align: center;
+      margin: 10px;
+    }
+   .row-custom h4, .row-custom h5 {
+    margin: 0; /* Rimuove il margine predefinito */
+    padding: 10px; /* Rimuove il padding predefinito */
+    
+    border: 2px solid #001a00;; /* Definisci un bordo trasparente iniziale */
+    display: inline-block; /* Assicurati che le parole siano visualizzate su una singola riga */
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+  }
+  .row-custom h4:hover, .row-custom h5:hover {
+    background-color: rgba(0, 51, 0, 0.5); /* Cambia il colore di sfondo al passaggio del mouse */
+    border-color:#001a00; /* Cambia il colore del bordo al passaggio del mouse */
+  }
+  .pagination-container {
+  text-align: center;
+}
+.pagination{
+  display: inline-block;
+}
+.pagination a {
+  color: white;
+  display: inline-block;
+  width: 30px; /* Larghezza dei link */
+  padding:8px 0;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #001a00;
+}
+.pagination a:hover:not(.active) {background-color:rgba(0, 51, 0, 0.5);
+}
+.custom-panel {
+      background-color: #ffffe6; /* Colore di sfondo del pannello */
+      border: 1px solid rgb(0, 51, 0); /* Bordo del pannello */
+      padding: 10px; /* Spaziatura interna del pannello */
+      font-family: garamond;
+      text-align: center;
+    }
+
+    .spacer {
+      flex-grow: 1;
+    }
+ #custom-panel1 {
+      margin-top:80px;
+      margin-bottom: 90px; /* Posiziona il primo pannello in alto */
+    }
+
+    #custom-panel2 {
+      margin-top: 90px;
+      margin-bottom: 90px; /* Posiziona il secondo pannello al centro */
+      display: flex;
+      flex-wrap: wrap; /* Consente ai bottoni di andare su più righe se necessario */
+      gap: 15px; /* Spazio tra i bottoni */
+      font-family: garamond;
+    }
+    .custom-panel .btn-secondary {
+      background-color: #001a00; /* Colore di sfondo del bottone */
+      color: white; /* Colore del testo del bottone */
+      border: none; /* Rimuovi bordo */
+      font-family: garamond;
+    }
+    
+    .custom-panel .btn-secondary:hover {
+      background-color:#001a00; /* Colore di sfondo del bottone al passaggio del mouse */
+      color: white; /* Colore del testo al passaggio del mouse */
+    }
+    
+    .custom-panel .dropdown-menu .dropdown-item {
+      background-color: rgba(0, 51, 0, 0.5) ; /* Colore di sfondo delle voci del menu a tendina */
+      color: white; /* Colore del testo delle voci del menu a tendina */
+    }
+    
+    .custom-panel .dropdown-menu .dropdown-item:hover {
+      background-color:rgba(0, 51, 0, 0.7);   /* Colore di sfondo delle voci del menu a tendina al passaggio del mouse */
+      color: black; /* Colore del testo al passaggio del mouse */
+      font-family: garamond;
+
+    #custom-panel3 {
+      margin-top: 10px; /* Posiziona il terzo pannello in basso */
+      margin-bottom: 10px; 
+    }
+    </style>
+</head>
+  
+  <body class="gallerypage custom-background">
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-bg-green">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Narciso e l'intertestualità</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="paginainiziale.html">Intro</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active"  href="tutorial.bootstrap.html">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Catalogo 
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item"aria-current="page" href="#">Galleria</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">tipologia</a></li>
+            
+            <li><a class="dropdown-item" href="lineadeltempo.html">tempo</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn-barra" type="submit">Search</button>
+      </form>
+    <!-- Barra di ricerca sticky-top -->
+<div class="container sticky-top">
+  <!-- Contenuto della barra di ricerca -->
+</div>
+</div>
+</nav>
+<div class="container-fluid">
+  <div class="row">
+ <div class="col-2 custom-bg-green ">
+        <!-- Contenuto del pannello -->
+        <div class="custom-panel" id="custom-panel1">
+        <p>BOTTONI VERDI CON NOMI ARTISTI A MO' DI LINK</p>
+</div>
+ <div class="custom-panel d-flex flex-wrap gap-2" id="custom-panel2">
+    <h4 class="w-100">FILTRA PER:</h4>
+      <div class="btn-group">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          TIPOLOGIE
+        </button>
+        <div class="dropdown-menu">
+         <button class="dropdown-item" onclick="showSubcategories('categoria1')">DIPINTI</button>
+          <button class="dropdown-item" onclick="showSubcategories('categoria1')">STATUARIA</button>
+          <button class="dropdown-item" onclick="showSubcategories('categoria1')">MOSAICI</button>
+        </div>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          SOGGETTO
+        </button>
+        <div class="dropdown-menu">
+          <button class="dropdown-item" onclick="showSubcategories('categoria2')">NARCISO SOLO</button>
+          <button class="dropdown-item" onclick="showSubcategories('categoria2')">NARCISO E ECO</button>
+          <button class="dropdown-item" onclick="showSubcategories('categoria2')">NARCISO E ALTRI PERSONAGGI</button>
+        </div>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">DATAZIONE</button>
+        <div class="dropdown-menu">
+          <button class="dropdown-item" onclick="showSubcategories('categoria3')">XV SEC. </button>
+          <button class="dropdown-item" onclick="showSubcategories('categoria3')">XVI SEC.</button>
+          <button class="dropdown-item" onclick="showSubcategories('categoria3')">XVII SEC.</button>
+          <button class="dropdown-item" onclick="showSubcategories('categoria3')">XVIII SEC.</button>
+          <button class="dropdown-item" onclick="showSubcategories('categoria3')">XIX SEC.</button>
+          <button class="dropdown-item" onclick="showSubcategories('categoria3')">XX SEC.</button>
+        </div>
+      </div>
+      <div id="filteredContent" class="w-100 mt-2">
+        <!-- Contenuto filtrato verrà mostrato qui -->
+      </div>
+</div>
+ <div class="custom-panel" id="custom-panel3">
+        <p> XML/TEI</p>
+</div>
+</div>
+  <div class="col-md-10">
+    <div class="row">
+      <div class="col-12">
+  <h1>Com'è cambiata l'iconografia legata a Narciso?</h1>
+  <p>Le raffigurazioni del mito di Narciso,  nell’arte antica, a partire dal I sec. a.C./I sec. d.C. ridiventano poi frequenti soprattutto dal XV sec. in poi. Il momento della vicenda più spesso rappresentato, dall’antichità a oggi, è quello di Narciso davanti alla fonte, intento a contemplare la propria immagine riflessa.Mitico figlio di Cefiso e della ninfa Liriope; insensibile all’amore, non ricambiò la travolgente passione di Eco, per cui fu punito dalla dea Nemesi che lo fece innamorare della propria immagine riflessa in una fonte; morì consumato da questa vana passione, trasformandosi nel fiore omonimo. Il mito è narrato da Ovidio ed è argomento frequente di pitture pompeiane.
+</p>
+ </div>
+  <div class="col-12" id="myContainer">
+    <div class="container-opacity" id="myContainer">
+      <div class="position-relative">
+            <section>
+              <div class="row">
+                    <!-- Immagine 1 -->
+                    <div class="col-md-3 col-img">
+                      <div class="img-container">
+                        <img src="./immagini/cristinedepizan.jpg" class="img-galleria" alt="Immagine 1" data-bs-toggle="modal" data-bs-target="#modal1">
+                         <span class="badge custom-bg-green">XV secolo</span>
+                      </div>
+                    </div>
+                    <!-- Immagine 2 -->
+                    <div class="col-md-3 col-img">
+                      <div class="img-container">
+                        <img src="./immagini/dipintomedievale.png" class="img-galleria" alt="Immagine 2" data-bs-toggle="modal" data-bs-target="#modal2">
+                        <span class="badge custom-bg-green">fine XV secolo</span>
+                    </div>
+                  </div>
+                    <!-- Immagine 3 -->
+                    <div class="col-md-3 col-img">
+                      <div class="img-container">
+                        <img src="./immagini/narcisocaravaggio.jpg"class="img-galleria" alt="Immagine 3" data-bs-toggle="modal" data-bs-target="#modal3">
+                        <span class="badge custom-bg-green">XVI secolo</span>
+                    </div>
+                  </div>
+                    <!-- Immagine 4 -->
+                    <div class="col-md-3 col-img">
+                      <div class="img-container">
+                        <img src="./immagini/narcisoallungato.jpg" class="img-galleria" alt="Immagine 4" data-bs-toggle="modal" data-bs-target="#modal4">
+                        <span class="badge custom-bg-green">XVII secolo</span>
+                    </div>
+                    </div>
+                    <div class="col-md-3 col-img">
+                      <div class="img-container">
+                        <img src="./immagini/Lépicié,_Nicolas-Bernardt_-_Narcisse_-_1771.jpg" class="img-galleria" alt="Immagine 5" data-bs-toggle="modal5" data-bs-target="#modal5">
+                        <span class="badge custom-bg-green">XVIII secolo</span>
+                    </div>
+                  </div>
+                    <div class="col-md-3 col-img ">
+                      <div class="img-container">
+                        <img src="./immagini/images.jpg" class="img-galleria" alt="Immagine 6" data-bs-toggle="modal" data-bs-target="#modal6">
+                        <span class="badge custom-bg-green ">XVI secolo</span>
+                    </div>
+                  </div>
+                     <div class="col-md-3 col-img">
+                      <div class="img-container">
+                        <img src="./immagini/Cat. 575 Narcisse c RG Ojéda.jpg" class="img-galleria" alt="Immagine 8" data-bs-toggle="modal" data-bs-target="#modal9">
+                        <span class="badge custom-bg-green">XVII secolo</span>
+                    </div>
+                  </div>
+                    <div class="col-md-3 col-img ">
+                      <div class="img-container">
+                        <img src="./immagini/Screenshot (20).jpg" class="img-galleria" alt="Immagine 8" data-bs-toggle="modal" data-bs-target="#modal8">
+                        <span class="badge custom-bg-green">XVIII secolo</span>
+                    </div>
+                  </div>
+                    <div class="col-md-3 col-img">
+                      <div class="img-container">
+                        <img src="./immagini/narcisoprono.jpg" class="img-galleria" alt="Immagine 9" data-bs-toggle="modal" data-bs-target="#modal8">
+                        <span class="badge custom-bg-green">XIX secolo</span>
+                    </div>
+                  </div>
+                   <div class="col-md-3 col-img">
+                      <div class="img-container">
+                        <img src="./immagini/ecoenarcisowhaterhouse.jpg" class="img-galleria" alt="Immagine 10" data-bs-toggle="modal" data-bs-target="#modal7">
+                        <span class="badge custom-bg-green">XX secolo</span>
+                    </div>
+                  </div>
+                    <div class="col-md-3 col-img">
+                      <div class="img-container">
+                        <img src="./immagini/paesaggioconnarciso.jpg"class="img-galleria" alt="Immagine 11" data-bs-toggle="modal" data-bs-target="#modal20">
+                        <span class="badge custom-bg-green">XX secolo</span>
+                    </div>
+                  </div>
+                    <div class="col-md-3 col-img">
+                      <div class="img-container">
+                        <img src="./immagini/Screenshot (21).jpg"  class="img-galleria" alt="Immagine 12" data-bs-toggle="modal" data-bs-target="#modal21">
+                        <span class="badge custom-bg-green">XX secolo</span>
+                    </div>
+                  </div>
+                </div>
+              <!---ho creato una div per centrare meglio le frecce-->  
+                <div class="col-12 text-center">
+                     <div class="d-inline-block">
+                          <button type="button" class="btn btn-primary" style="background-color: transparent; border: none;">&#60;</button>
+                          <button type="button" class="btn btn-primary ml-auto" style="background-color: transparent; border: none;">&#62;</button>
+                    </div>
+                </div>
+              
+            </section>
+          </div>
+        </div>
+      </div>
+      </div>
+  </div>
+<!-- Modali -->
+<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+    <!-- Contenuto della modal -->
+    <div class="modal-dialog">
+        <div class="modal-content modal-content-custom">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Epitre d’Othéa à Hector (1410 ca.) – 100 histoires</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+                <!-- Contenuto della modal -->
+              <h3>DESCRIZIONE:</h3>
+              <h5> illustrazione, ; Bruxelles, Bibliothèque Royale, Ms. 9392, f. 19 v</h5>
+              <p>Tre scene rappresentate sincronicamente: (1) Narciso, abbigliato come un cavaliere medievale, rifiuta le profferte di una dama (Eco?); (2) si reca alla fonte (trasformata in fontana esagonale nel giardino d’amore: vd. statuetta di Cupido); (3) si abbandona alla morte.</p>
+            </div>
+    </div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+    <!-- Contenuto della modal -->
+    <div class="modal-dialog">
+        <div class="modal-content modal-content-custom">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">NARCISO ALLA FONTE</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+                <!-- Contenuto della modal -->
+              <h3>DESCRIZIONE:</h3>
+              <h5> dipinto su tavola,fine XV sec. Parigi, Musèe Jacquemart André.</h5>
+              <p>Recupero di una tradizione figurativa e letteraria che definisce Narciso come esempio (negativo) di vanità.Opera forse influenzata dalla traduzione delle Metamorfosi di Bonsignori (1497).Da notare il rilievo attribuito alla figura di Eco, che insegue </p>
+            </div>
+    </div>
+</div>
+</div>
+<div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+    <!-- Contenuto della modal -->
+    <div class="modal-dialog">
+        <div class="modal-content modal-content-custom">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel"> Narciso alla fonte</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+                <!-- Contenuto della modal -->
+              <h3>DESCRIZIONE:</h3>
+              <h5>olio su tela, 1597-1599 ca. Roma, Palazzo Barberini </h5>
+              <p> L'iconografia del mito di Ovidio prevedeva molti elementi, il bosco rigoglioso, i cervi, il cane, l’arco del giovane cacciatore, i fiori a lui dedicati, ma Caravaggio cancella tutto questo e coglie il momento in cui Narciso si china sulla fonte e rapito, tenta di afferrare la propria immagine.La bocca dischiusa, rende l’apice dello struggimento di Narciso che, resosi conto della natura paradossale del suo sentimento, si lascia morire. Un insolito schema compositivo, dispone, come una carta da gioco, la parte inferiore speculare a quella superiore, un ribaltamento della tela di 180 gradi per ottenere la figura riflessa. La trovata del ginocchio nudo fa da centro di attrazione visiva e l’ampia manica a sbuffo accompagna lo sguardo verso la mano immersa nell’acqua nel tentativo di abbracciare quella forma ingannevole di sé, come narrato nelle Metamorfosi.</p>
+            </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modal4Label" aria-hidden="true">
+    <!-- Contenuto della modal -->
+     <div class="modal-dialog">
+        <div class="modal-content modal-content-custom">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel"> Narciso ed Eco</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+                <!-- Contenuto della modal -->
+              <h3>DESCRIZIONE:</h3>
+              <h5> olio su tela; Parigi, Musée du Louvre.</h5>
+              <p>Iconografia priva di precedenti: suggestione delle testimonianze classiche a cui si aggiunge una sensibile interpretazione del motivo cardine del poema ovidiano, la metamorfosi: Eco è indistinguibile dal masso al quale si appoggia tanto per il cromatismo, quanto per le fattezze quasi evanescenti; la testa di Narciso fa tutt’uno con i fiori che verranno ritrovati al posto del suo corpo.La posizione inconsueta del giovane, riverso a terra, è un rimando intervisuale al Cristo morto di Paris Bordon (Venezia, Palazzo Ducale). </p>
+              <button onclick="window.location.href = 'https://catalogo.beniculturali.it/detail/PhotographicHeritage/0800418623';">Scopri di più</button>
+            </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="modal5Label" aria-hidden="true">
+    <!-- Contenuto della modal -->
+</div>
+<div class="modal fade" id="modal6" tabindex="-1" aria-labelledby="modal6Label" aria-hidden="true">
+    <!-- Contenuto della modal -->
+</div>
+<div class="modal fade" id="modal7" tabindex="-1" aria-labelledby="modal7Label" aria-hidden="true">
+    <!-- Contenuto della modal -->
+</div>
+<div class="modal fade" id="modal8" tabindex="-1" aria-labelledby="modal8Label" aria-hidden="true">
+    <!-- Contenuto della modal -->
+</div>
+<div class="modal fade" id="modal9" tabindex="-1" aria-labelledby="modal9Label" aria-hidden="true">
+    <!-- Contenuto della modal -->
+</div>
+
+<div class="container4 custom-container p-5 my-5 border">
+  <h1>PAROLE-CHIAVE</h1>
+  <!-- Two Unequal Columns -->
+<div class="row row-custom">
+  <div class="col-8">
+      <h5>CORONA DI NARCISI</h5></div>
+  <div class="col-4"><h4>FONTE</h4></div>
+</div>
+
+<!-- Four Unequal Columns -->
+<div class="row row-custom">
+  <div class="col-2"><h4>MORTE</h4></div>
+  <div class="col-2"><h5>SPECCHIO</h5></div>
+  <div class="col-2"><h4>METAMORFOSI</h4></div>
+  <div class="col-6"><h4>RIFLESSO</h4></div>
+</div>
+
+<!-- Setting two column widths -->
+<div class="row row-custom">
+  <div class="col-4"><h4>DOPPIO</h4></div>
+  <div class="col-6"><h4>NUDITA'</h4></div>
+  <div class="col"><h4>ECO</h4></div>
+  <div class="col"><h5>BOSCO</h5></div>
+</div>
+</div>
+<div class="pagination-container">
+ <div class="pagination">
+  <a href="#">&laquo;</a>
+  <a href="#">1</a>
+  <a class="active" href="#">2</a>
+  <a href="#">3</a>
+  <a href="#">4</a>
+  <a href="#">5</a>
+  <a href="#">6</a>
+  <a href="#">&raquo;</a>
+</div>
+</div>
+  <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<!--script che chatgpt mi ha fatto inserire per il dorpdown dei bottoni nel pannello per filtri-->
+ <script>
+    function showSubcategories(category, subcategory) {
+      var content = document.getElementById('filteredContent');
+      content.innerHTML = ''; // Clear previous content
+
+      if (category === 'categoria1') {
+        if (subcategory === 'sottocategoria1') {
+          content.innerHTML += '<div>Elemento 1 (Sottocategoria 1)</div>';
+        } else if (subcategory === 'sottocategoria2') {
+          content.innerHTML += '<div>Elemento 2 (Sottocategoria 2)</div>';
+        } else if (subcategory === 'sottocategoria3') {
+          content.innerHTML += '<div>Elemento 3 (Sottocategoria 3)</div>';
+        }
+      } else if (category === 'categoria2') {
+        if (subcategory === 'sottocategoria4') {
+          content.innerHTML += '<div>Elemento 4 (Sottocategoria 4)</div>';
+        } else if (subcategory === 'sottocategoria5') {
+          content.innerHTML += '<div>Elemento 5 (Sottocategoria 5)</div>';
+        } else if (subcategory === 'sottocategoria6') {
+          content.innerHTML += '<div>Elemento 6 (Sottocategoria 6)</div>';
+        }
+      }
+    }
+  </script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+   
+  <style>
+    .footer {
+  margin-top: 50px;
+  color: #ffffff; 
+  font-family:garamond;
+  text-align: center;
+  padding-bottom: 20px;
+    padding-top: 20px; 
+}
+  </style>
+  <footer class="footer custom-bg-green">
+  <div class=" footer">
+    <div class="row">
+      <div class="col-md-6">
+        <h3>Link utili</h3>
+        <ul class="list-unstyled">
+          <li><a href="/contatti">Contatti</a></li>
+          <li><a href="/faq">Domande frequenti</a></li>
+          <li><a href="/termini">Termini e condizioni</a></li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h3>Seguici</h3>
+        <ul class="list-unstyled">
+          <li><a href="https://www.facebook.com/il-tuo-sito">Facebook</a></li>
+          <li><a href="https://twitter.com/il_tuo_sito">Twitter</a></li>
+          <li><a href="https://www.instagram.com/il_tuo_sito">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+    <span class="text-muted">© 2024 Rosita Serena</span>
+  </div>
+</footer>
+</body>
+</html>
